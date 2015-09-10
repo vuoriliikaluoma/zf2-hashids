@@ -27,8 +27,8 @@ class ModuleTest extends \PHPUnit_Framework_TestCase
         $this->assertInternalType('array', $this->module->getServiceConfig());
     }
 
-    public function testControllerConfigIsAnArray()
+    public function testControllerPluginConfigIsAnArray()
     {
-        $this->assertInternalType('array', $this->module->getControllerConfig());
+        $this->assertInternalType('array', $this->module->getControllerPluginConfig());
     }
 }

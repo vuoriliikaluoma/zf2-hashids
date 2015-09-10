@@ -3,10 +3,11 @@
 namespace DaMess\Hashids;
 
 use Zend\ModuleManager\Feature\ConfigProviderInterface;
+use Zend\ModuleManager\Feature\ControllerPluginProviderInterface;
 use Zend\ModuleManager\Feature\ControllerProviderInterface;
 use Zend\ModuleManager\Feature\ServiceProviderInterface;
 
-class Module implements ServiceProviderInterface, ConfigProviderInterface, ControllerProviderInterface
+class Module implements ServiceProviderInterface, ConfigProviderInterface, ControllerPluginProviderInterface
 {
     public function getServiceConfig()
     {
@@ -18,8 +19,8 @@ class Module implements ServiceProviderInterface, ConfigProviderInterface, Contr
         return require __DIR__ . '/../../config/module.config.php';
     }
 
-    public function getControllerConfig()
+    public function getControllerPluginConfig()
     {
-        return require __DIR__ . '/../../config/controllers.config.php';
+        return require __DIR__ . '/../../config/controller.plugins.config.php';
     }
 }
