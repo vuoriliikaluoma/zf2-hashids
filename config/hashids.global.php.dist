@@ -3,7 +3,7 @@
 return array(
     'hashids' => array(
         /*
-         * The salt to use for encryption
+         * The salt to use when encoding an id to a hash and decoding a hash to an id
          * NOTE: Do not change this once it's been set
          */
         'salt'       => '',

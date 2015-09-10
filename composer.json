@@ -1,5 +1,5 @@
 {
-  "name": "dannym87/zf2-hashids",
+  "name": "damess/zf2-hashids",
   "description": "Zend Framework 2 module for hashids allowing you to obfuscate ID's in your API",
   "type": "library",
   "authors": [
