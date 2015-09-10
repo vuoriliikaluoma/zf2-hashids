@@ -14,9 +14,11 @@ This is a Zend Framework 2 module for the [PHP Hashids library](https://github.c
 
 (Optional) GNU Multiple Precision or BCMath to allow integers greater than 1,000,000,000 to be encoded. See [https://github.com/ivanakimov/hashids.php](https://github.com/ivanakimov/hashids.php) for more information.
 
-## Installation
+## Installation using Composer
 
-// todo
+```sh
+composer require damess/zf2-hashids
+```
 
 ## Options
 
