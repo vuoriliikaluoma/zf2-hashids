@@ -1,0 +1,38 @@
+{
+  "name": "dannym87/zf2-hashids",
+  "description": "Zend Framework 2 module for hashids allowing you to obfuscate ID's in your API",
+  "type": "library",
+  "authors": [
+    {
+      "name": "Daniel Messenger",
+      "email": "dannym87@gmail.com"
+    }
+  ],
+  "license": "MIT",
+  "keywords": [
+    "zend",
+    "zend framework 2",
+    "zf2",
+    "obfuscate",
+    "hashids"
+  ],
+  "require": {
+    "php" : ">=5.3.3",
+    "zendframework/zend-mvc": "2.*",
+    "zendframework/zend-servicemanager": "2.*",
+    "zendframework/zend-stdlib": "2.*",
+    "hashids/hashids": "1.0.*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "4.*",
+    "zendframework/zendframework": "2.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "DaMess\\Hashids\\": "src/Hashids"
+    },
+    "classmap": [
+      "Module.php"
+    ]
+  }
+}
