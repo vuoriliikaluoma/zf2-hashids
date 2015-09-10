@@ -20,6 +20,20 @@ This is a Zend Framework 2 module for the [PHP Hashids library](https://github.c
 composer require damess/zf2-hashids
 ```
 
+Add the module to ./config/application.config.php
+
+```php
+<?php
+
+return array(
+    'modules' => array(
+        'Application',
+        'DaMess\Hashids',
+    ),
+    ...
+);
+```
+
 ## Options
 
 The Hashids module has some options to allow you to quickly change the configuration. After installing the module, copy ./vendor/damess/zf2-hashids/config/hashids.global.php.dist to ./config/autoload/hashids.global.php and change the values as required.
