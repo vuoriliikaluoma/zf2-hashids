@@ -25,7 +25,9 @@
   },
   "require-dev": {
     "phpunit/phpunit": "4.*",
-    "zendframework/zendframework": "2.*"
+    "zendframework/zendframework": "2.*",
+    "squizlabs/php_codesniffer": "2.3.*",
+    "satooshi/php-coveralls": "~0.6"
   },
   "autoload": {
     "psr-4": {

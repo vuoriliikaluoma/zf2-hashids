@@ -68,5 +68,4 @@ class ModuleOptions extends AbstractOptions
     {
         $this->alphabet = $alphabet;
     }
-
 }

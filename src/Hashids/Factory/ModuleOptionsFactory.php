@@ -14,5 +14,4 @@ class ModuleOptionsFactory implements FactoryInterface
 
         return new ModuleOptions($config['hashids']);
     }
-
 }
