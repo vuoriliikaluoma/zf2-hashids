@@ -47,15 +47,18 @@ The Hashids module has some options to allow you to quickly change the configura
 
 return array(
     'hashids' => array(
+    
         /*
          * The salt to use for encryption
          * NOTE: Do not change this once it's been set
          */
         'salt'       => '',
+        
         /*
          * Minimum length of the generated hash
          */
         'min_length' => 22,
+        
         /*
          * Define which characters are used when building the hash
          */
