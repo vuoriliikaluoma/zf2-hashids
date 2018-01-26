@@ -6,7 +6,7 @@ use DaMess\Hashids\Factory\HashidsServiceFactory;
 use DaMess\Hashids\Options\ModuleOptions;
 use Zend\ServiceManager\ServiceManager;
 
-class HashidsServiceFactoryTest extends \PHPUnit_Framework_TestCase
+class HashidsServiceFactoryTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var HashidsServiceFactory
@@ -28,14 +28,14 @@ class HashidsServiceFactoryTest extends \PHPUnit_Framework_TestCase
 
     public function testInstance()
     {
-        $this->assertInstanceOf('Zend\ServiceManager\FactoryInterface', $this->factory);
+        $this->assertInstanceOf('Zend\ServiceManager\Factory\FactoryInterface', $this->factory);
     }
 
     public function testCreateService()
     {
         $this->serviceManager->setService('DaMess\Hashids\Options\ModuleOptions', new ModuleOptions());
 
-        $service = $this->factory->createService($this->serviceManager);
+        $service = $this->factory->__invoke($this->serviceManager, HashidsServiceFactory::class);
 
         $this->assertInstanceOf('DaMess\Hashids\Service\HashidsService', $service);
     }

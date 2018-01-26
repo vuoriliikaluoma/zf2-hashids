@@ -4,7 +4,7 @@ namespace DaMess\Hashids\Tests\Options;
 
 use DaMess\Hashids\Options\ModuleOptions;
 
-class ModuleOptionsTest extends \PHPUnit_Framework_TestCase
+class ModuleOptionsTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var ModuleOptions
@@ -22,8 +22,10 @@ class ModuleOptionsTest extends \PHPUnit_Framework_TestCase
         $this->assertInstanceOf('Zend\Stdlib\AbstractOptions', $this->options);
         $this->assertEquals('', $this->options->getSalt());
         $this->assertEquals(22, $this->options->getMinLength());
-        $this->assertEquals('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890',
-            $this->options->getAlphabet());
+        $this->assertEquals(
+            'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890',
+            $this->options->getAlphabet()
+        );
     }
 
     public function testCanSetAndGetSalt()

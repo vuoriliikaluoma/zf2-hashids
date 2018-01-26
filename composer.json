@@ -1,34 +1,25 @@
 {
-  "name": "damess/zf2-hashids",
-  "description": "Zend Framework 2 module for hashids allowing you to obfuscate ID's in your API",
+  "name": "vuoriliikaluoma/zf3-hashids",
+  "description": "Zend Framework 3 module for hashids allowing you to obfuscate ID's in your API",
   "type": "library",
   "authors": [
     {
       "name": "Daniel Messenger",
       "email": "dannym87@gmail.com"
+    },
+    {
+      "name": "Kimmo Matias Vuori Liikaluoma",
+      "email": "vuoriliikaluoma@gmail.com"
     }
   ],
   "license": "MIT",
   "keywords": [
     "zend",
-    "zend framework 2",
-    "zf2",
+    "zend framework 3",
+    "zf3",
     "obfuscate",
     "hashids"
   ],
-  "require": {
-    "php" : ">=5.3.3",
-    "zendframework/zend-mvc": "2.*",
-    "zendframework/zend-servicemanager": "2.*",
-    "zendframework/zend-stdlib": "2.*",
-    "hashids/hashids": "1.0.*"
-  },
-  "require-dev": {
-    "phpunit/phpunit": "4.*",
-    "zendframework/zendframework": "2.*",
-    "squizlabs/php_codesniffer": "2.3.*",
-    "satooshi/php-coveralls": "~0.6"
-  },
   "autoload": {
     "psr-4": {
       "DaMess\\Hashids\\": "src/Hashids"
@@ -36,5 +27,16 @@
     "classmap": [
       "Module.php"
     ]
+  },
+  "require": {
+    "php": "^5.6 || ^7.0",
+    "zendframework/zend-mvc": "^3.1",
+    "hashids/hashids": "^2.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^6.5"
+  },
+  "scripts": {
+    "test": "phpunit"
   }
 }

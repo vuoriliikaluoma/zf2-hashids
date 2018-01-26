@@ -5,7 +5,7 @@ namespace DaMess\Hashids\Tests\Factory;
 use DaMess\Hashids\Factory\ModuleOptionsFactory;
 use Zend\ServiceManager\ServiceManager;
 
-class ModuleOptionsFactoryTest extends \PHPUnit_Framework_TestCase
+class ModuleOptionsFactoryTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var ModuleOptionsFactory
@@ -27,16 +27,16 @@ class ModuleOptionsFactoryTest extends \PHPUnit_Framework_TestCase
 
     public function testInstance()
     {
-        $this->assertInstanceOf('Zend\ServiceManager\FactoryInterface', $this->factory);
+        $this->assertInstanceOf('Zend\ServiceManager\Factory\FactoryInterface', $this->factory);
     }
 
     public function testCreateService()
     {
-        $config = array('hashids' => array());
+        $config = [ 'hashids' => [] ];
 
         $this->serviceManager->setService('Config', $config);
 
-        $moduleOptions = $this->factory->createService($this->serviceManager);
+        $moduleOptions = $this->factory->__invoke($this->serviceManager, ModuleOptionsFactory::class);
 
         $this->assertInstanceOf('DaMess\Hashids\Options\ModuleOptions', $moduleOptions);
     }

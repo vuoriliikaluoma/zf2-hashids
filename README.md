@@ -1,7 +1,4 @@
-# ZF2 Hashids
-
-[![Build Status](https://travis-ci.org/dannym87/zf2-hashids.svg?branch=master)](https://travis-ci.org/dannym87/zf2-hashids)
-[![Coverage Status](https://coveralls.io/repos/dannym87/zf2-hashids/badge.svg?branch=master&service=github)](https://coveralls.io/github/dannym87/zf2-hashids?branch=master)
+# ZF3 Hashids
 
 ## Full documentation
 
@@ -9,15 +6,15 @@ This is a Zend Framework 2 module for the [PHP Hashids library](https://github.c
 
 ## Requirements
 
-- PHP 5.3.3 or higher
-- Zend Framework 2.1 onwards
+- PHP 5.6 or higher
+- Zend Framework 3
 
 (Optional) GNU Multiple Precision or BCMath to allow integers greater than 1,000,000,000 to be encoded. See [https://github.com/ivanakimov/hashids.php](https://github.com/ivanakimov/hashids.php) for more information.
 
 ## Installation using Composer
 
 ```sh
-composer require damess/zf2-hashids
+composer require vuoriliikaluoma/zf3-hashids
 ```
 
 Add the module to ./config/application.config.php
@@ -36,7 +33,7 @@ return array(
 
 ## Options
 
-The Hashids module has some options to allow you to quickly change the configuration. After installing the module, copy ./vendor/damess/zf2-hashids/config/hashids.global.php.dist to ./config/autoload/hashids.global.php and change the values as required.
+The Hashids module has some options to allow you to quickly change the configuration. After installing the module, copy ./vendor/damess/zf3-hashids/config/hashids.global.php.dist to ./config/autoload/hashids.global.php and change the values as required.
 
 - **salt** - Default value of ''. This is the value used when encoding an ID into a hash. Note: Please do not change this value once it's been set.
 - **min_length** - Default value of 22. This defines the minimum length of the encoded hash value.
@@ -47,18 +44,18 @@ The Hashids module has some options to allow you to quickly change the configura
 
 return array(
     'hashids' => array(
-    
+
         /*
          * The salt to use for encryption
          * NOTE: Do not change this once it's been set
          */
         'salt'       => '',
-        
+
         /*
          * Minimum length of the generated hash
          */
         'min_length' => 22,
-        
+
         /*
          * Define which characters are used when building the hash
          */

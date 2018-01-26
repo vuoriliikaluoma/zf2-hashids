@@ -4,7 +4,7 @@ namespace DaMess\Hashids\Tests\Controller\Plugin;
 
 use DaMess\Hashids\Controller\Plugin\Hashids;
 
-class HashidsTest extends \PHPUnit_Framework_TestCase
+class HashidsTest extends \PHPUnit\Framework\TestCase
 {
     public function testHashids()
     {

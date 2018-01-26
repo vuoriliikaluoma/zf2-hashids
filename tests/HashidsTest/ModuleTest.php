@@ -4,7 +4,7 @@ namespace DaMess\Hashids\Tests;
 
 use DaMess\Hashids\Module;
 
-class ModuleTest extends \PHPUnit_Framework_TestCase
+class ModuleTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var Module

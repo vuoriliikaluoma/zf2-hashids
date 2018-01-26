@@ -6,7 +6,7 @@ use DaMess\Hashids\Factory\HashidsPluginFactory;
 use Zend\Mvc\Controller\PluginManager;
 use Zend\ServiceManager\ServiceManager;
 
-class HashidsPluginFactoryTest extends \PHPUnit_Framework_TestCase
+class HashidsPluginFactoryTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var HashidsPluginFactory
@@ -21,7 +21,7 @@ class HashidsPluginFactoryTest extends \PHPUnit_Framework_TestCase
 
     public function testInstance()
     {
-        $this->assertInstanceOf('Zend\ServiceManager\FactoryInterface', $this->factory);
+        $this->assertInstanceOf('Zend\ServiceManager\Factory\FactoryInterface', $this->factory);
     }
 
     public function testCreateService()
@@ -29,16 +29,13 @@ class HashidsPluginFactoryTest extends \PHPUnit_Framework_TestCase
         $serviceManager = new ServiceManager();
         $serviceManager->setAllowOverride(true);
 
-        $pluginManager = new PluginManager();
-        $pluginManager->setServiceLocator($serviceManager);
-
         $mockService = $this->getMockBuilder('DaMess\Hashids\Service\HashidsService')
             ->disableOriginalConstructor()
             ->getMock();
 
         $serviceManager->setService('DaMess\Hashids\Service\HashidsService', $mockService);
 
-        $service = $this->factory->createService($pluginManager);
+        $service = $this->factory->__invoke($serviceManager, HashidsPluginFactory::class);
 
         $this->assertInstanceOf('DaMess\Hashids\Controller\Plugin\Hashids', $service);
     }

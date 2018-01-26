@@ -5,7 +5,7 @@ namespace DaMess\Hashids\Tests\Service;
 use DaMess\Hashids\Service\HashidsService;
 use Hashids\Hashids;
 
-class HashidsServiceTest extends \PHPUnit_Framework_TestCase
+class HashidsServiceTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var HashidsService
