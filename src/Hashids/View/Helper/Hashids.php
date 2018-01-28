@@ -1,6 +1,6 @@
 <?php
 
-namespace DaMess\Hashids\View\Plugin;
+namespace DaMess\Hashids\View\Helper;
 
 use DaMess\Hashids\Service\ObfuscatorInterface;
 use Zend\View\Helper\AbstractHelper;

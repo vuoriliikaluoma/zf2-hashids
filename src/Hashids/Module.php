@@ -6,8 +6,13 @@ use Zend\ModuleManager\Feature\ConfigProviderInterface;
 use Zend\ModuleManager\Feature\ControllerPluginProviderInterface;
 use Zend\ModuleManager\Feature\ControllerProviderInterface;
 use Zend\ModuleManager\Feature\ServiceProviderInterface;
+use Zend\ModuleManager\Feature\ViewHelperProviderInterface;
 
-class Module implements ServiceProviderInterface, ConfigProviderInterface, ControllerPluginProviderInterface
+class Module implements
+    ServiceProviderInterface,
+    ConfigProviderInterface,
+    ControllerPluginProviderInterface,
+    ViewHelperProviderInterface
 {
     public function getServiceConfig()
     {
@@ -22,5 +27,10 @@ class Module implements ServiceProviderInterface, ConfigProviderInterface, Contr
     public function getControllerPluginConfig()
     {
         return require __DIR__ . '/../../config/controller.plugins.config.php';
+    }
+
+    public function getViewHelperConfig()
+    {
+        return require __DIR__ . '/../../config/view.helper.config.php';
     }
 }
