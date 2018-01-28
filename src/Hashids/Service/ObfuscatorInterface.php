@@ -16,7 +16,7 @@ interface ObfuscatorInterface
      * Convert the hash into the original ID
      *
      * @param string $value
-     * @return int
+     * @return int|false
      */
     public function decode($value);
 }
