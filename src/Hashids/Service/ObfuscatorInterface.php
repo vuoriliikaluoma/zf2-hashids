@@ -5,18 +5,38 @@ namespace DaMess\Hashids\Service;
 interface ObfuscatorInterface
 {
     /**
-     * Convert the value into a obfuscated hash
+     * Encode array of values.
      *
-     * @param int $value
+     * @param mixed[] $array
+     *
      * @return string
      */
-    public function encode($value);
+    public function encode($array);
 
     /**
-     * Convert the hash into the original ID
+     * Decode string.
      *
-     * @param string $value
-     * @return int|false
+     * @param string $string
+     *
+     * @return mixed[]
      */
-    public function decode($value);
+    public function decode($string);
+
+    /**
+     * Encode hex number.
+     *
+     * @param string $number
+     *
+     * @return string
+     */
+    public function encodeHex($number);
+
+    /**
+     * Decode hex string.
+     *
+     * @param string $string
+     *
+     * @return string
+     */
+    public function decodeHex($string);
 }

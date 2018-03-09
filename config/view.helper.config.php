@@ -1,10 +1,10 @@
 <?php
 
-return array(
-    'factories' => array(
+return [
+    'factories' => [
         'DaMess\Hashids\View\Helper\Hashids' => 'DaMess\Hashids\Factory\HashidsHelperFactory',
-    ),
-    'aliases'   => array(
+    ],
+    'aliases'   => [
         'hashids' => 'DaMess\Hashids\View\Helper\Hashids',
-    ),
-);
+    ],
+];

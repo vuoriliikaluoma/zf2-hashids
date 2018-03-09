@@ -1,10 +1,10 @@
 <?php
 
-return array(
-    'factories' => array(
+return [
+    'factories' => [
         'DaMess\Hashids\Controller\Plugin\Hashids' => 'DaMess\Hashids\Factory\HashidsPluginFactory',
-    ),
-    'aliases'   => array(
+    ],
+    'aliases'   => [
         'hashids' => 'DaMess\Hashids\Controller\Plugin\Hashids',
-    ),
-);
+    ],
+];

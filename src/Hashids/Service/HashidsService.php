@@ -20,24 +20,50 @@ class HashidsService implements ObfuscatorInterface
     }
 
     /**
-     * Convert the value into a obfuscated hash
+     * Encode array of values.
      *
-     * @param int $value
+     * @param mixed[] $array
+     *
      * @return string
      */
-    public function encode($value)
+    public function encode($array)
     {
-        return $this->hashids->encode($value);
+        return $this->hashids->encode($array);
     }
 
     /**
-     * Convert the hash into the original ID
+     * Decode string.
      *
-     * @param string $value
-     * @return int|false
+     * @param string $string
+     *
+     * @return mixed[]
      */
-    public function decode($value)
+    public function decode($string)
     {
-        return $this->hashids->decode($value)[0] ?? false;
+        return $this->hashids->decode($string);
+    }
+
+    /**
+     * Encode hex number.
+     *
+     * @param string $number
+     *
+     * @return string
+     */
+    public function encodeHex($number)
+    {
+        return $this->hashids->encodeHex($number);
+    }
+
+    /**
+     * Decode hex string.
+     *
+     * @param string $string
+     *
+     * @return string
+     */
+    public function decodeHex($string)
+    {
+        return $this->hashids->decodeHex($string);
     }
 }
