@@ -14,7 +14,7 @@ class HashidsPluginFactory implements FactoryInterface
         /**
          * @var HashidsService $hashidsService
          */
-        $hashidsService = $container->get('DaMess\Hashids\Service\HashidsService');
+        $hashidsService = $container->get(HashidsService::class);
 
         return new Hashids($hashidsService);
     }

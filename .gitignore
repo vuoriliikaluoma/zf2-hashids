@@ -1,4 +1,5 @@
-.idea
-build
+*.sublime-*
+composer.phar
+config/hashids.global.php
 phpunit.xml
-vendor
+vendor/

@@ -15,7 +15,7 @@ class HashidsServiceFactory implements FactoryInterface
         /**
          * @var ModuleOptions $moduleOptions
          */
-        $moduleOptions = $container->get('DaMess\Hashids\Options\ModuleOptions');
+        $moduleOptions = $container->get(ModuleOptions::class);
 
         $hashids = new Hashids(
             $moduleOptions->getSalt(),
